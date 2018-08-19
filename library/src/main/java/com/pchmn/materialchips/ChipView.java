@@ -11,6 +11,7 @@ import android.support.annotation.ColorInt;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -211,11 +212,17 @@ public class ChipView extends RelativeLayout {
             // set icon
             if(mAvatarIconUri != null)
                 mAvatarIconImageView.setImageURI(mAvatarIconUri);
-            else if(mAvatarIconDrawable != null)
+            else if(mAvatarIconDrawable != null){
+                mAvatarIconImageView.setPadding(16,0,0,0);
                 mAvatarIconImageView.setImageDrawable(mAvatarIconDrawable);
-            else
-                mAvatarIconImageView.setVisibility(GONE);
-                //mAvatarIconImageView.setImageBitmap(mLetterTileProvider.getLetterTile(getLabel()));
+            }
+            else{
+                mAvatarIconImageView.setImageBitmap(mLetterTileProvider.getLetterTile(getLabel()));
+                int dimensionInDp = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 32, getResources().getDisplayMetrics());
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(dimensionInDp, dimensionInDp);
+                mAvatarIconImageView.setLayoutParams(layoutParams);
+
+            }
         }
     }
 
