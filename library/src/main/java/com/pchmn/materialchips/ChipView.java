@@ -214,7 +214,8 @@ public class ChipView extends RelativeLayout {
             else if(mAvatarIconDrawable != null)
                 mAvatarIconImageView.setImageDrawable(mAvatarIconDrawable);
             else
-                mAvatarIconImageView.setImageBitmap(mLetterTileProvider.getLetterTile(getLabel()));
+                mAvatarIconImageView.setVisibility(GONE);
+                //mAvatarIconImageView.setImageBitmap(mLetterTileProvider.getLetterTile(getLabel()));
         }
     }
 

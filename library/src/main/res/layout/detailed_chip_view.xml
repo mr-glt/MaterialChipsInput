@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
-    android:layout_width="300dp"
-    android:layout_height="100dp"
+    android:layout_width="200dp"
+    android:layout_height="65dp"
     android:focusableInTouchMode="true"
     android:focusable="true"
     android:clickable="true">
@@ -10,23 +10,24 @@
     <!-- content -->
     <RelativeLayout
         android:id="@+id/content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="200dp"
         android:background="@drawable/bg_chip_view_opened"
         android:elevation="6dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true">
 
         <!-- avatar icon -->
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/avatar_icon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_centerVertical="true"
             android:src="@drawable/avatar"/>
 
@@ -39,8 +40,8 @@
             android:layout_toRightOf="@+id/avatar_icon"
             android:layout_toLeftOf="@+id/delete_button"
             android:layout_centerVertical="true"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp">
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
 
             <!-- name -->
             <TextView
@@ -50,7 +51,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:scrollHorizontally="true"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:text="Contact name sdfdsfdsfdgs"/>
 
             <!-- info -->
@@ -58,8 +59,8 @@
                 android:id="@+id/info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:textSize="14sp"
+                android:layout_marginTop="1dp"
+                android:textSize="12sp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:scrollHorizontally="true"
@@ -75,7 +76,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="8dp"
             android:src="@drawable/ic_cancel_white_24dp"/>
         
     </RelativeLayout>

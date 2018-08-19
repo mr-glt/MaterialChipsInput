@@ -82,6 +82,7 @@ public class ChipsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
         // edit text
+        mEditText.setTextSize(18);
         if(position == mChipList.size()) {
             if(mChipList.size() == 0)
                 mEditText.setHint(mHintLabel);
